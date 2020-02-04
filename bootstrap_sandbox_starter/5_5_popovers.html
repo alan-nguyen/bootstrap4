@@ -207,7 +207,7 @@
       <button class="btn btn-secondary" onclick="hidePopover()">
         Hide Popover
       </button>
-      <button class="btn btn-secondary" onclick="toggleopover()">
+      <button class="btn btn-secondary" onclick="togglePopover()">
         Toggle Popover
       </button>
     </div>
@@ -244,6 +244,23 @@
       function togglePopover() {
         $('hello').popover('toggle');
       }
+
+      // Popover events
+      $('#hello').on('show.bs.popover', function() {
+        console.log('Popover show');
+      });
+
+      $('#hello').on('shown.bs.popover', function() {
+        console.log('Popover showm');
+      });
+
+      $('#hello').on('hide.bs.popover', function() {
+        console.log('Popover hide');
+      });
+
+      $('#hello').on('hidden.bs.popover', function() {
+        console.log('Popover hidden');
+      });
     </script>
   </body>
 </html>
