@@ -188,6 +188,7 @@
 
       <!-- DISMISSIBLE POPOVER -->
       <button
+        id="hello"
         class="btn btn-primary"
         data-toggle="popover"
         data-placement="top"
@@ -200,9 +201,15 @@
       <hr />
 
       <!-- CONTROL WITH JS -->
-      <button class="btn btn-secondary">Show Popover</button>
-      <button class="btn btn-secondary">Hide Popover</button>
-      <button class="btn btn-secondary">Toggle Popover</button>
+      <button class="btn btn-secondary" onclick="showPopover()">
+        Show Popover
+      </button>
+      <button class="btn btn-secondary" onclick="hidePopover()">
+        Hide Popover
+      </button>
+      <button class="btn btn-secondary" onclick="toggleopover()">
+        Toggle Popover
+      </button>
     </div>
 
     <div style="margin-top:500px;"></div>
@@ -225,6 +232,18 @@
     <script>
       // Init popover
       $('[data-toggle="popover"]').popover();
+
+      function showPopover() {
+        $('hello').popover('show');
+      }
+
+      function hidePopover() {
+        $('hello').popover('hide');
+      }
+
+      function togglePopover() {
+        $('hello').popover('toggle');
+      }
     </script>
   </body>
 </html>
